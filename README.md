@@ -27,7 +27,6 @@
 - [⚙️ Prerequisites & Environment Setup](#️-prerequisites--environment-setup)
 - [🚀 Step-by-Step Installation & Run Guide](#-step-by-step-installation--run-guide)
 - [📤 How to Push Updates to GitHub](#-how-to-push-updates-to-github)
-- [🌐 How to Deploy Live on Netlify](#-how-to-deploy-live-on-netlify)
 - [📬 Contact & Social Links](#-contact--social-links)
 - [💖 Thank You Note](#-a-heartfelt-thank-you-to-every-visitor-)
 
@@ -41,22 +40,20 @@
 - 💻 **Interactive IDE Hero Card**: Live tabbed code viewer showing developer profile details and JSON technology stack metadata.
 - 📊 **GitHub Activity Dashboard**: Custom contribution heatmap (38+ contributions) and dynamic programming language ratio pie chart.
 - 📱 **100% Responsive & Accessible**: Built following WCAG 2.2 AA accessibility standards with full keyboard navigation and semantic HTML.
-- 🌐 **Netlify Deployment Ready**: Includes pre-configured `netlify.toml` for 1-click continuous deployment.
 
 ---
 
 ## 🛠️ Tech Stack & Architecture
 
-| Layer               | Technology           | Description                                                       |
-| :------------------ | :------------------- | :---------------------------------------------------------------- |
-| **Framework**       | **Next.js 15**       | App Router, Turbopack, Server & Client Components                 |
-| **Language**        | **TypeScript 5**     | Strict type safety and clear interface definitions                |
-| **Styling**         | **Tailwind CSS v4**  | Modern utility-first styling with HSL design variables            |
-| **Animations**      | **Framer Motion**    | Micro-interactions, page transitions, and smooth entrance reveals |
-| **Icons**           | **Lucide React**     | Clean, accessible SVG iconography                                 |
-| **Theme**           | **Next-Themes**      | Theme provider support for system & dark modes                    |
-| **API Integration** | **GitHub REST API**  | Live client-side fetching for real-time repository stats          |
-| **Deployment**      | **Netlify / Vercel** | Automated CI/CD pipeline deployment                               |
+| Layer               | Technology          | Description                                                       |
+| :------------------ | :------------------ | :---------------------------------------------------------------- |
+| **Framework**       | **Next.js 15**      | App Router, Turbopack, Server & Client Components                 |
+| **Language**        | **TypeScript 5**    | Strict type safety and clear interface definitions                |
+| **Styling**         | **Tailwind CSS v4** | Modern utility-first styling with HSL design variables            |
+| **Animations**      | **Framer Motion**   | Micro-interactions, page transitions, and smooth entrance reveals |
+| **Icons**           | **Lucide React**    | Clean, accessible SVG iconography                                 |
+| **Theme**           | **Next-Themes**     | Theme provider support for system & dark modes                    |
+| **API Integration** | **GitHub REST API** | Live client-side fetching for real-time repository stats          |
 
 ---
 
@@ -152,20 +149,6 @@ git commit -m "Update portfolio features and documentation"
 # 3. Push to your main branch on GitHub
 git push origin main
 ```
-
----
-
-## 🌐 How to Deploy Live on Netlify
-
-1. Push your code to GitHub following the steps above.
-2. Go to **[Netlify.com](https://www.netlify.com/)** and log in with your **GitHub account**.
-3. Click **Add new site** ➔ **Import an existing project** ➔ select **GitHub**.
-4. Choose your **`Portfolio`** repository. Netlify will auto-detect the [`netlify.toml`](./netlify.toml) settings:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `.next`
-5. Click **Deploy Portfolio**.
-
-Within 60 seconds, Netlify will generate a live public link accessible worldwide!
 
 ---
 
