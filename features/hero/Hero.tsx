@@ -279,7 +279,7 @@ export function Hero() {
                         {'  '}year:{' '}
                         <span className="text-[#B7FFAE]">&quot;2nd Year CSE Student&quot;</span>,
                         {'\n'}
-                        {'  '}publicRepos: <span className="text-[#39FF14]">9</span>,{'\n'}
+                        {'  '}publicRepos: <span className="text-[#39FF14]">11</span>,{'\n'}
                         {'  '}contributionsLastYear: <span className="text-[#39FF14]">38</span>,
                         {'\n'}
                         {'  '}currentFocus:{' '}
