@@ -164,14 +164,19 @@ P.D.A College of Engineering, Kalaburagi, Karnataka, India
 
 ---
 
-## 💖 A Heartfelt Thank You to Every Visitor! 🌸🙌
-
-> I am so grateful you took a moment out of your busy day to analyze my projects and work 💻✨. Your interest and support truly mean everything to me! Your curiosity and support mean the world to a growing engineer like me! 🎓⭐💖
->
-> **Hope to connect with you soon! 🤝💫💖**
-
----
-
 ## 📄 License
 
 Created by **Sriniwas Awasthi**. Personal project code and architecture available for reference and learning.
+
+---
+
+## 💖 A Heartfelt Thank You to Every Visitor! 🌸🙌
+
+> Thank you so much for dropping by and spending your precious time exploring my profile and projects! 💖  
+> It truly means the world to me that you took a moment out of your day to read through my work and journey. 🌿✨
+>
+> I hope you found something here that inspired you or brought a smile to your face! 🚀  
+> Building and learning is a journey I cherish, and knowing you took the time to read through it makes it all the more special. 💫
+>
+> 🌈 If you enjoyed what you saw, feel free to connect or leave a star ⭐️  
+> Wishing you endless success and brightness in everything you do! 🚀✨ Have a fantastic day ahead! 💖🚀
