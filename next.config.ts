@@ -28,6 +28,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,

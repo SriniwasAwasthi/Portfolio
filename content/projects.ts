@@ -235,4 +235,51 @@ export const projectsData: Project[] = [
     github: 'https://github.com/SriniwasAwasthi/AI-Agents-for-hackathons',
     coverColor: 'bg-[#50FA7B]',
   },
+  {
+    id: 'color-puzzle-2024',
+    name: 'Color Puzzle 2024',
+    summary:
+      'Vibrant, interactive 2048-style grid puzzle game featuring RPG campaign levels, daily quests, 432 Hz ambient music, and power-ups.',
+    problem:
+      'Traditional 2048 puzzle games can feel repetitive without level progression, power-ups, daily challenges, or custom ambient audio.',
+    solution:
+      'Developed Color Puzzle 2024 — an engaging grid-based number merging puzzle with RPG campaign levels, daily seeded quests, 432 Hz Web Audio music, in-game power-ups (Hammers & Swappers), and dark/light themes.',
+    features: [
+      'Interactive 2048 grid tile merging with smooth physics & animations',
+      'RPG Campaign Mode with sequential level objectives & coin rewards',
+      'In-game Shop with Hammer & Swapper tile power-ups',
+      'Synthesized 432 Hz ambient audio & sound effects via Web Audio API',
+    ],
+    tech: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'Web Audio API'],
+    learnings:
+      'Implementing grid slide algorithms with collision logic and Web Audio API synthesizer nodes produced smooth 60 FPS gameplay.',
+    future: ['Global online multiplayer head-to-head matches', 'Custom tile skin marketplace'],
+    github: 'https://github.com/SriniwasAwasthi/color-puzzle-2024-source',
+    coverColor: 'bg-[#39FF14]',
+  },
+  {
+    id: 'engineering-portfolio',
+    name: 'Engineering Portfolio',
+    summary:
+      'Modern, high-performance personal showcase built with Next.js 15, TypeScript, Tailwind CSS v4, Framer Motion, and Live GitHub REST API.',
+    problem:
+      'Static developer portfolios often lack real-time activity updates, interactive code viewers, dynamic project filtering, and rich glassmorphic aesthetics.',
+    solution:
+      'Built a state-of-the-art engineering portfolio featuring live GitHub API activity sync, tabbed IDE code previewer, contribution heatmaps, interactive case-study modals, and neon design tokens.',
+    features: [
+      'Live GitHub REST API auto-synchronization for real-time repository stats',
+      'Interactive IDE Hero Card with live tabbed code viewer',
+      'Custom contribution activity heatmap & language distribution charts',
+      'Modern neon glassmorphic aesthetic built with Tailwind CSS v4',
+    ],
+    tech: ['TypeScript', 'Next.js 15', 'React', 'Tailwind CSS v4', 'Framer Motion'],
+    learnings:
+      'Optimizing Next.js 15 App Router client state while rendering dynamic Framer Motion reveal animations required clean component separation and robust fallback data stores.',
+    future: [
+      'Add blog section with Markdown file parsing',
+      'Integrate interactive terminal CLI modal',
+    ],
+    github: 'https://github.com/SriniwasAwasthi/Portfolio',
+    coverColor: 'bg-[#7CFF6B]',
+  },
 ];

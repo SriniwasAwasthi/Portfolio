@@ -257,3 +257,9 @@
 :root:not(.dark) ::-webkit-scrollbar-thumb {
   background: hsl(240 5.9% 80%);
 }
+
+/* Hide Next.js Dev Overlay Indicator */
+nextjs-portal,
+[data-nextjs-toast-wrapper] {
+  display: none !important;
+}

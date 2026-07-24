@@ -115,6 +115,30 @@ const fallbackRepos = [
     updated: 'Updated Jun 5',
     url: 'https://github.com/SriniwasAwasthi/AI-Agents-for-hackathons',
   },
+  {
+    name: 'color-puzzle-2024-source',
+    displayName: 'Color Puzzle 2024',
+    description:
+      'Vibrant 2048-style grid puzzle game featuring RPG campaign levels, daily quests, Web Audio ambient music, and power-ups.',
+    language: 'TypeScript',
+    langColor: 'bg-[#39FF14]',
+    stars: 1,
+    forks: 0,
+    updated: 'Updated recently',
+    url: 'https://github.com/SriniwasAwasthi/color-puzzle-2024-source',
+  },
+  {
+    name: 'Portfolio',
+    displayName: 'Engineering Portfolio',
+    description:
+      'Personal showcase website built with Next.js 15, TypeScript, Tailwind CSS v4, Framer Motion, and live GitHub API integration.',
+    language: 'TypeScript',
+    langColor: 'bg-sky-500',
+    stars: 1,
+    forks: 0,
+    updated: 'Updated recently',
+    url: 'https://github.com/SriniwasAwasthi/Portfolio',
+  },
 ];
 
 const langColors: Record<string, string> = {
