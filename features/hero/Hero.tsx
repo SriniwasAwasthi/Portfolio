@@ -43,6 +43,20 @@ export function Hero() {
   const { fadeIn, slideUp, staggerContainer } = useMotionPresets();
   const [activeTab, setActiveTab] = React.useState<'profile' | 'tech'>('profile');
   const [copied, setCopied] = React.useState(false);
+  const [publicReposCount, setPublicReposCount] = React.useState<number>(12);
+
+  React.useEffect(() => {
+    fetch('https://api.github.com/users/SriniwasAwasthi')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && typeof data.public_repos === 'number') {
+          setPublicReposCount(data.public_repos);
+        }
+      })
+      .catch(() => {
+        // Fallback to default
+      });
+  }, []);
 
   const copyEmail = () => {
     const emailAddress = siteConfig.links.email.replace('mailto:', '');
@@ -279,7 +293,7 @@ export function Hero() {
                         {'  '}year:{' '}
                         <span className="text-[#B7FFAE]">&quot;2nd Year CSE Student&quot;</span>,
                         {'\n'}
-                        {'  '}publicRepos: <span className="text-[#39FF14]">12</span>,{'\n'}
+                        {'  '}publicRepos: <span className="text-[#39FF14]">{publicReposCount}</span>,{'\n'}
                         {'  '}contributionsLastYear: <span className="text-[#39FF14]">38</span>,
                         {'\n'}
                         {'  '}currentFocus:{' '}
