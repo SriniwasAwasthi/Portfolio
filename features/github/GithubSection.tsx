@@ -185,6 +185,19 @@ interface DisplayRepo {
   url: string;
 }
 
+const langHexColors: Record<string, string> = {
+  TypeScript: '#3b82f6',
+  JavaScript: '#eab308',
+  Python: '#10b981',
+  Java: '#d97706',
+  HTML: '#f43f5e',
+  CSS: '#38bdf8',
+  C: '#6366f1',
+  'C++': '#9333ea',
+  Code: '#39FF14',
+  Other: '#a855f7',
+};
+
 export function GithubSection() {
   const [contributions, setContributions] = React.useState<number[]>(generateContributions);
   const [totalContributions, setTotalContributions] = React.useState<number>(62);
@@ -253,7 +266,42 @@ export function GithubSection() {
     fetchLiveRepos();
     fetchLiveContributions();
   }, []);
+
   const totalRepos = repos.length;
+
+  const languageDistribution = React.useMemo(() => {
+    const counts: Record<string, number> = {};
+    repos.forEach((repo) => {
+      const lang = repo.language || 'Other';
+      counts[lang] = (counts[lang] || 0) + 1;
+    });
+
+    const total = repos.length || 1;
+    return Object.entries(counts)
+      .map(([lang, count]) => ({
+        lang,
+        count,
+        percentage: Math.round((count / total) * 100),
+        color: langColors[lang] || 'bg-primary',
+        hexColor: langHexColors[lang] || '#39FF14',
+      }))
+      .sort((a, b) => b.count - a.count);
+  }, [repos]);
+
+  const topLanguage = languageDistribution[0]?.lang || 'TypeScript';
+
+  const CIRCUMFERENCE = 251.327;
+  let cumulativeOffset = 0;
+  const pieSegments = languageDistribution.map((item) => {
+    const dashLength = (item.count / totalRepos) * CIRCUMFERENCE;
+    const offset = -cumulativeOffset;
+    cumulativeOffset += dashLength;
+    return {
+      ...item,
+      dashLength,
+      offset,
+    };
+  });
 
   return (
     <section
@@ -465,46 +513,20 @@ export function GithubSection() {
                       strokeWidth="8"
                       className="opacity-20"
                     />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="40"
-                      fill="transparent"
-                      stroke="#3b82f6"
-                      strokeWidth="8"
-                      strokeDasharray="168.3 251.2"
-                      strokeDashoffset="0"
-                    />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="40"
-                      fill="transparent"
-                      stroke="#10b981"
-                      strokeWidth="8"
-                      strokeDasharray="27.6 251.2"
-                      strokeDashoffset="-168.3"
-                    />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="40"
-                      fill="transparent"
-                      stroke="#f59e0b"
-                      strokeWidth="8"
-                      strokeDasharray="27.6 251.2"
-                      strokeDashoffset="-195.9"
-                    />
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="40"
-                      fill="transparent"
-                      stroke="#ec4899"
-                      strokeWidth="8"
-                      strokeDasharray="27.6 251.2"
-                      strokeDashoffset="-223.5"
-                    />
+                    {pieSegments.map((seg) => (
+                      <circle
+                        key={seg.lang}
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        fill="transparent"
+                        stroke={seg.hexColor}
+                        strokeWidth="8"
+                        strokeDasharray={`${seg.dashLength} ${CIRCUMFERENCE}`}
+                        strokeDashoffset={seg.offset}
+                        className="transition-all duration-500"
+                      />
+                    ))}
                   </svg>
 
                   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none">
@@ -512,41 +534,24 @@ export function GithubSection() {
                       {totalRepos} Public Repos
                     </span>
                     <span className="text-sm font-bold text-[#39FF14] font-heading">
-                      TypeScript
+                      {topLanguage}
                     </span>
                   </div>
                 </div>
 
-                {/* Legend list */}
+                {/* Dynamic Language Legend List */}
                 <div className="space-y-2.5 text-xs">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded bg-blue-500" />
-                      <span className="text-muted-foreground">TypeScript</span>
+                  {languageDistribution.slice(0, 5).map((item) => (
+                    <div key={item.lang} className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className={cn('w-2.5 h-2.5 rounded', item.color)} />
+                        <span className="text-muted-foreground">{item.lang}</span>
+                      </div>
+                      <span className="font-bold text-foreground font-mono">
+                        {item.count} {item.count === 1 ? 'repo' : 'repos'} ({item.percentage}%)
+                      </span>
                     </div>
-                    <span className="font-bold text-foreground font-mono">Core Stack</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded bg-emerald-500" />
-                      <span className="text-muted-foreground">Python</span>
-                    </div>
-                    <span className="font-bold text-foreground font-mono">Systems &amp; AI</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded bg-amber-500" />
-                      <span className="text-muted-foreground">JavaScript</span>
-                    </div>
-                    <span className="font-bold text-foreground font-mono">Web Engines</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded bg-pink-500" />
-                      <span className="text-muted-foreground">HTML / Other</span>
-                    </div>
-                    <span className="font-bold text-foreground font-mono">UI / Docs</span>
-                  </div>
+                  ))}
                 </div>
               </div>
             </Reveal>
