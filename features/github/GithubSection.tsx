@@ -152,21 +152,23 @@ const langColors: Record<string, string> = {
   'C++': 'bg-purple-600',
 };
 
-// Generate contribution activity matching exact GitHub screenshot (38 contributions in last year)
+// Generate fallback contribution activity matching exact GitHub activity (62 contributions)
 const generateContributions = () => {
   const list = new Array(364).fill(0);
   list[104] = 1;
   list[295] = 2;
-  list[320] = 3;
-  list[324] = 4;
-  list[325] = 2;
+  list[300] = 3;
+  list[310] = 4;
+  list[320] = 5;
+  list[324] = 6;
+  list[325] = 4;
   list[331] = 8;
-  list[333] = 4;
-  list[334] = 3;
-  list[338] = 5;
-  list[340] = 2;
-  list[341] = 1;
-  list[348] = 4;
+  list[333] = 6;
+  list[334] = 5;
+  list[338] = 7;
+  list[340] = 4;
+  list[341] = 2;
+  list[348] = 3;
   list[355] = 2;
   return list;
 };
@@ -184,12 +186,13 @@ interface DisplayRepo {
 }
 
 export function GithubSection() {
-  const contributions = React.useMemo(() => generateContributions(), []);
+  const [contributions, setContributions] = React.useState<number[]>(generateContributions);
+  const [totalContributions, setTotalContributions] = React.useState<number>(62);
   const [repos, setRepos] = React.useState<DisplayRepo[]>(fallbackRepos);
   const [loading, setLoading] = React.useState<boolean>(true);
   const [isLive, setIsLive] = React.useState<boolean>(false);
 
-  // Fetch live public repositories directly from GitHub REST API
+  // Fetch live public repositories & live contribution heatmap directly from GitHub APIs
   React.useEffect(() => {
     async function fetchLiveRepos() {
       try {
@@ -222,17 +225,34 @@ export function GithubSection() {
           setIsLive(true);
         }
       } catch (_err) {
-        // Fallback to static repos if rate limited or offline
         setIsLive(false);
       } finally {
         setLoading(false);
       }
     }
 
-    fetchLiveRepos();
-  }, []);
+    async function fetchLiveContributions() {
+      try {
+        const res = await fetch('https://github-contributions-api.jogruber.de/v4/SriniwasAwasthi?y=last');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data && data.total && typeof data.total.lastYear === 'number' && data.total.lastYear > 0) {
+          setTotalContributions(data.total.lastYear);
+        }
+        if (data && Array.isArray(data.contributions) && data.contributions.length > 0) {
+          const mapped = data.contributions.slice(-364).map((item: { count?: number; level?: number }) => item.count || item.level || 0);
+          if (mapped.length > 0) {
+            setContributions(mapped);
+          }
+        }
+      } catch (_err) {
+        // Keeps default 62 fallback
+      }
+    }
 
-  const totalContributions = 38;
+    fetchLiveRepos();
+    fetchLiveContributions();
+  }, []);
   const totalRepos = repos.length;
 
   return (

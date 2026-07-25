@@ -43,7 +43,8 @@ export function Hero() {
   const { fadeIn, slideUp, staggerContainer } = useMotionPresets();
   const [activeTab, setActiveTab] = React.useState<'profile' | 'tech'>('profile');
   const [copied, setCopied] = React.useState(false);
-  const [publicReposCount, setPublicReposCount] = React.useState<number>(12);
+  const [publicReposCount, setPublicReposCount] = React.useState<number>(13);
+  const [contributionsCount, setContributionsCount] = React.useState<number>(62);
 
   React.useEffect(() => {
     fetch('https://api.github.com/users/SriniwasAwasthi')
@@ -53,9 +54,16 @@ export function Hero() {
           setPublicReposCount(data.public_repos);
         }
       })
-      .catch(() => {
-        // Fallback to default
-      });
+      .catch(() => {});
+
+    fetch('https://github-contributions-api.jogruber.de/v4/SriniwasAwasthi?y=last')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.total && typeof data.total.lastYear === 'number') {
+          setContributionsCount(data.total.lastYear);
+        }
+      })
+      .catch(() => {});
   }, []);
 
   const copyEmail = () => {
@@ -294,7 +302,7 @@ export function Hero() {
                         <span className="text-[#B7FFAE]">&quot;2nd Year CSE Student&quot;</span>,
                         {'\n'}
                         {'  '}publicRepos: <span className="text-[#39FF14]">{publicReposCount}</span>,{'\n'}
-                        {'  '}contributionsLastYear: <span className="text-[#39FF14]">38</span>,
+                        {'  '}contributionsLastYear: <span className="text-[#39FF14]">{contributionsCount}</span>,
                         {'\n'}
                         {'  '}currentFocus:{' '}
                         <span className="text-[#B7FFAE]">
