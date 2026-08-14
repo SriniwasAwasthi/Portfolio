@@ -5,7 +5,7 @@ import { StoryCard } from './StoryCard';
 import { LearningMilestones } from './LearningMilestones';
 import { QuoteCallout } from './QuoteCallout';
 import { Reveal } from '@/components/animations/Reveal';
-import { BookOpen, Code2, Brain, Compass, Cpu, Target } from 'lucide-react';
+import { BookOpen, Code2, Brain, Target, Cpu } from 'lucide-react';
 
 export function AboutSection() {
   return (
@@ -36,12 +36,10 @@ export function AboutSection() {
             <Reveal delay={0.15}>
               <div className="prose prose-neutral dark:prose-invert max-w-none">
                 <h3 className="text-xl font-heading font-bold text-foreground mb-4">
-                  Building software with purpose.
+                  Built 10+ full-stack web applications using Next.js 15, Drizzle ORM, and Gemini AI
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  I am a Computer Science Engineering student passionate about creating thoughtful
-                  digital experiences. I enjoy solving complex problems, writing clean code, and
-                  building products that combine simplicity, performance, and reliability.
+                  I am a Full-Stack Software Engineer &amp; AI Systems Developer pursuing Computer Science Engineering at PDA College of Engineering (Kalaburagi). I specialize in solving complex problems, writing clean code, and building high-performance products that combine AI workflows, modern web UI, and reliable databases.
                 </p>
               </div>
             </Reveal>
@@ -103,8 +101,8 @@ export function AboutSection() {
             <Reveal delay={0.38}>
               <QuoteCallout
                 quote="Technology changes every day. Curiosity, discipline, and the willingness to keep learning are what truly build great engineers."
-                author="Sriniwas"
-                role="Computer Science Engineering Student"
+                author="Sriniwas Awasthi"
+                role="Full-Stack Software Engineer & AI Systems Developer"
               />
             </Reveal>
 

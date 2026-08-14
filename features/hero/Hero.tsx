@@ -10,40 +10,11 @@ import { useMotionPresets } from '@/components/animations/MotionPresets';
 import { siteConfig } from '@/config/site';
 import DecryptedText from '@/components/animations/DecryptedText';
 
-// Code Snippet for the IDE Card
-const profileCode = `const developer = {
-  name: "Sriniwas",
-  title: "Full Stack Engineer & AI Enthusiast",
-  education: "Computer Science Engineering Student",
-  passions: [
-    "Machine Learning Systems",
-    "Scalable Web Architectures",
-    "Developer Tooling"
-  ],
-  currentFocus: "Building Autonomous Agents & Core Systems",
-  status: "Open to Internships"
-};`;
-
-const interestsCode = `{
-  "coreTechStack": [
-    "TypeScript", "Next.js", "React",
-    "Python", "FastAPI", "PostgreSQL",
-    "Docker", "PyTorch", "Tailwind"
-  ],
-  "creativeTools": [
-    "Three.js", "Framer Motion", "Figma"
-  ],
-  "learningNext": [
-    "Distributed Systems",
-    "LLM Fine-tuning"
-  ]
-}`;
-
 export function Hero() {
-  const { fadeIn, slideUp, staggerContainer } = useMotionPresets();
+  const { slideUp, staggerContainer } = useMotionPresets();
   const [activeTab, setActiveTab] = React.useState<'profile' | 'tech'>('profile');
   const [copied, setCopied] = React.useState(false);
-  const [publicReposCount, setPublicReposCount] = React.useState<number>(13);
+  const [publicReposCount, setPublicReposCount] = React.useState<number>(15);
   const [contributionsCount, setContributionsCount] = React.useState<number>(62);
 
   React.useEffect(() => {
@@ -111,12 +82,12 @@ export function Hero() {
             Open to Internships
           </motion.div>
 
-          {/* Greeting */}
+          {/* Greeting / Subtitle */}
           <motion.p
             variants={slideUp}
             className="text-xs font-bold tracking-widest text-muted-foreground uppercase mb-2 font-heading"
           >
-            2nd Year CSE Student · P.D.A College of Engineering, Kalaburagi
+            3rd Year CS &amp; Software Engineering Student · P.D.A College of Engineering, Kalaburagi
           </motion.p>
 
           {/* Main Headline */}
@@ -132,8 +103,7 @@ export function Hero() {
             variants={slideUp}
             className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground/80 mb-6"
           >
-            Building modern web applications, Java &amp; DSA tools, AI study assistants, and
-            interactive projects.
+            Full-Stack Software Engineer &amp; AI Systems Developer
           </motion.h2>
 
           {/* Value Prop & Description */}
@@ -141,7 +111,7 @@ export function Hero() {
             variants={slideUp}
             className="text-base text-muted-foreground max-w-xl mb-8 leading-relaxed"
           >
-            Computer Science Engineering · Full Stack Development · Java &amp; AI Systems
+            Building 10+ modern web applications using Next.js 15, Drizzle ORM, and Gemini AI.
           </motion.p>
 
           {/* CTAs */}
@@ -171,7 +141,7 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          {/* Social Links & Micro-interactions */}
+          {/* Social Links */}
           <motion.div variants={slideUp} className="flex items-center gap-5">
             <a
               href={siteConfig.links.github}
@@ -293,20 +263,27 @@ export function Hero() {
                         <span className="text-[#39FF14]">developer</span> = &#123;{'\n'}
                         {'  '}name:{' '}
                         <span className="text-[#B7FFAE]">&quot;Sriniwas Awasthi&quot;</span>,{'\n'}
+                        {'  '}role:{' '}
+                        <span className="text-[#B7FFAE]">
+                          &quot;Full-Stack Software Engineer &amp; AI Systems Developer&quot;
+                        </span>
+                        ,{'\n'}
                         {'  '}college:{' '}
                         <span className="text-[#B7FFAE]">
                           &quot;P.D.A College of Engineering, Kalaburagi&quot;
                         </span>
                         ,{'\n'}
                         {'  '}year:{' '}
-                        <span className="text-[#B7FFAE]">&quot;2nd Year CSE Student&quot;</span>,
-                        {'\n'}
+                        <span className="text-[#B7FFAE]">
+                          &quot;3rd Year CS &amp; Software Engineering Student&quot;
+                        </span>
+                        ,{'\n'}
                         {'  '}publicRepos: <span className="text-[#39FF14]">{publicReposCount}</span>,{'\n'}
                         {'  '}contributionsLastYear: <span className="text-[#39FF14]">{contributionsCount}</span>,
                         {'\n'}
                         {'  '}currentFocus:{' '}
                         <span className="text-[#B7FFAE]">
-                          &quot;Java DSA, Web Apps &amp; Gemini AI Agents&quot;
+                          &quot;Next.js 15, Drizzle ORM &amp; Gemini AI Systems&quot;
                         </span>
                         ,{'\n'}
                         {'  '}status:{' '}
@@ -321,14 +298,14 @@ export function Hero() {
                         {'  '}
                         <span className="text-[#39FF14]">&quot;coreTechStack&quot;</span>: [{'\n'}
                         {'    '}
-                        <span className="text-[#B7FFAE]">&quot;C&quot;</span>,{' '}
-                        <span className="text-[#B7FFAE]">&quot;C++&quot;</span>,{' '}
-                        <span className="text-[#B7FFAE]">&quot;Java&quot;</span>,{' '}
-                        <span className="text-[#B7FFAE]">&quot;SQL&quot;</span>,{'\n'}
+                        <span className="text-[#B7FFAE]">&quot;Next.js 15&quot;</span>,{' '}
+                        <span className="text-[#B7FFAE]">&quot;React&quot;</span>,{' '}
+                        <span className="text-[#B7FFAE]">&quot;TypeScript&quot;</span>,{' '}
+                        <span className="text-[#B7FFAE]">&quot;Tailwind CSS&quot;</span>,{'\n'}
                         {'    '}
-                        <span className="text-[#B7FFAE]">&quot;HTML&quot;</span>,{' '}
-                        <span className="text-[#B7FFAE]">&quot;JavaScript&quot;</span>,{' '}
-                        <span className="text-[#B7FFAE]">&quot;CSS&quot;</span>
+                        <span className="text-[#B7FFAE]">&quot;Drizzle ORM&quot;</span>,{' '}
+                        <span className="text-[#B7FFAE]">&quot;PostgreSQL&quot;</span>,{' '}
+                        <span className="text-[#B7FFAE]">&quot;Gemini AI API&quot;</span>
                         {'\n'}
                         {'  '}],{'\n'}
                         {'  '}
@@ -336,17 +313,17 @@ export function Hero() {
                         {'\n'}
                         {'    '}
                         <span className="text-[#B7FFAE]">
-                          &quot;Object-Oriented Programming (OOP)&quot;
+                          &quot;Full-Stack Architecture &amp; Database Schemas&quot;
                         </span>
                         ,{'\n'}
                         {'    '}
                         <span className="text-[#B7FFAE]">
-                          &quot;Data Structures &amp; Algorithms&quot;
+                          &quot;Data Structures &amp; Object-Oriented Design&quot;
                         </span>
                         ,{'\n'}
                         {'    '}
                         <span className="text-[#B7FFAE]">
-                          &quot;Version Control (Git &amp; GitHub)&quot;
+                          &quot;Git Workflows &amp; RESTful APIs&quot;
                         </span>
                         {'\n'}
                         {'  '}],{'\n'}
@@ -354,12 +331,11 @@ export function Hero() {
                         <span className="text-[#39FF14]">&quot;extraSkills&quot;</span>: [{'\n'}
                         {'    '}
                         <span className="text-[#B7FFAE]">
-                          &quot;Complex Problem Solving&quot;
+                          &quot;AI System Prompt Architecture&quot;
                         </span>,{' '}
-                        <span className="text-[#B7FFAE]">&quot;Critical Thinking&quot;</span>,{'\n'}
+                        <span className="text-[#B7FFAE]">&quot;3D Web &amp; Canvas Games&quot;</span>,{'\n'}
                         {'    '}
-                        <span className="text-[#B7FFAE]">&quot;Fast Learner&quot;</span>,{' '}
-                        <span className="text-[#B7FFAE]">&quot;Leadership&quot;</span>
+                        <span className="text-[#B7FFAE]">&quot;Rapid Full-Stack Prototyping&quot;</span>
                         {'\n'}
                         {'  '}]{'\n'}&#125;
                       </code>
