@@ -21,19 +21,12 @@ const skillCategories = [
     title: 'Programming',
     icon: Code2,
     description:
-      'I build with Java, Python, C++, C, and SQL—choosing the right language for the problem rather than the other way around.',
+      'I build with Java, C++, C, and SQL—choosing the right language for the problem rather than the other way around.',
     skills: [
       {
         name: 'Java',
         category: 'languages',
         description: 'Application logic, OOP frameworks, and clean structuring.',
-        level: 'Intermediate',
-        icon: Terminal,
-      },
-      {
-        name: 'Python',
-        category: 'languages',
-        description: 'Data analysis, ML modeling, and FastAPI interfaces.',
         level: 'Intermediate',
         icon: Terminal,
       },

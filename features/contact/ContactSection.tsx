@@ -53,7 +53,7 @@ export function ContactSection() {
                   <div className="p-2 rounded-lg bg-[#39FF14]/10 text-[#39FF14] shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <span>Greater Bengaluru Area, India</span>
+                  <span>Kalaburagi, Karnataka, India</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <div className="p-2 rounded-lg bg-[#39FF14]/10 text-[#39FF14] shrink-0">
