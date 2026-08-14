@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { ArrowRight, FileText } from 'lucide-react';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { siteConfig } from '@/config/site';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -77,27 +76,17 @@ export function Navbar() {
         </a>
       </BorderGlow>
 
-      {/* Contact Button with BorderGlow */}
-      <BorderGlow
-        borderRadius={9999}
-        glowColor="111 100 54"
-        backgroundColor="transparent"
-        glowIntensity={1.0}
-        glowRadius={24}
-        edgeSensitivity={40}
-        colors={['#39FF14', '#7CFF6B', '#50FA7B']}
+      {/* Contact Button */}
+      <a
+        href="#contact"
+        className={cn(
+          buttonVariants({ variant: 'default', size: 'sm' }),
+          'gap-2 text-xs rounded-full cursor-pointer hover:bg-[#7CFF6B] border-0 bg-[#39FF14] text-[#030503] py-1.5 px-4 h-9 flex items-center justify-center font-bold shadow-[0_0_20px_rgba(57,255,20,0.4)]',
+        )}
       >
-        <a
-          href="#contact"
-          className={cn(
-            buttonVariants({ variant: 'default', size: 'sm' }),
-            'gap-2 text-xs rounded-full cursor-pointer hover:bg-[#7CFF6B] border-0 bg-[#39FF14] text-[#030503] py-1.5 px-4 h-9 flex items-center justify-center font-bold shadow-[0_0_20px_rgba(57,255,20,0.4)]',
-          )}
-        >
-          Contact
-          <ArrowRight className="w-3.5 h-3.5" />
-        </a>
-      </BorderGlow>
+        Contact
+        <ArrowRight className="w-3.5 h-3.5" />
+      </a>
     </>
   );
 
