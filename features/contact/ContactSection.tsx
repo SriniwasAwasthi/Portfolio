@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Mail, Github, Linkedin, MapPin, Download, Check, ExternalLink } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin, Download, Check } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Reveal } from '@/components/animations/Reveal';
@@ -78,28 +78,16 @@ export function ContactSection() {
                 </h3>
 
                 <div className="flex flex-col gap-4">
-                  {/* Primary Email button */}
-                  <BorderGlow
-                    borderRadius={9999}
-                    glowColor="111 100 54"
-                    backgroundColor="transparent"
-                    glowIntensity={1.0}
-                    glowRadius={30}
-                    colors={['#39FF14', '#7CFF6B', '#50FA7B']}
+                  {/* Primary Email button - Clean pill without rectangular BorderGlow */}
+                  <a
+                    href={siteConfig.links.email}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full rounded-full bg-[#39FF14] text-[#030503] hover:bg-[#7CFF6B] text-sm font-extrabold tracking-wide justify-center gap-2 cursor-pointer border-0 py-3 px-6 h-12 flex items-center shadow-[0_0_25px_rgba(57,255,20,0.4)] hover:shadow-[0_0_35px_rgba(57,255,20,0.6)] transition-all duration-300"
                   >
-                    <a
-                      href={siteConfig.links.email}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={cn(
-                        buttonVariants({ size: 'lg' }),
-                        'w-full rounded-full bg-[#39FF14] text-[#030503] hover:bg-[#7CFF6B] text-sm font-extrabold tracking-wide justify-center gap-2 cursor-pointer border-0 py-3 px-6 h-12 flex items-center shadow-[0_0_25px_rgba(57,255,20,0.4)] transition-all duration-300',
-                      )}
-                    >
-                      <Mail className="w-5 h-5 text-[#030503]" />
-                      Send an Email
-                    </a>
-                  </BorderGlow>
+                    <Mail className="w-5 h-5 text-[#030503]" />
+                    Send an Email
+                  </a>
 
                   {/* Copy Email Helper */}
                   <button
