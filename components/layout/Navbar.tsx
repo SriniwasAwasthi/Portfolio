@@ -79,10 +79,7 @@ export function Navbar() {
       {/* Contact Button */}
       <a
         href="#contact"
-        className={cn(
-          buttonVariants({ variant: 'default', size: 'sm' }),
-          'gap-2 text-xs rounded-full cursor-pointer hover:bg-[#7CFF6B] border-0 bg-[#39FF14] text-[#030503] py-1.5 px-4 h-9 flex items-center justify-center font-bold shadow-[0_0_20px_rgba(57,255,20,0.4)]',
-        )}
+        className="inline-flex items-center justify-center gap-2 text-xs rounded-full cursor-pointer bg-[#39FF14] hover:bg-[#7CFF6B] text-[#030503] py-1.5 px-4 h-9 font-bold transition-all border-0 outline-none select-none"
       >
         Contact
         <ArrowRight className="w-3.5 h-3.5" />
