@@ -15,7 +15,7 @@ export function Hero() {
   const [activeTab, setActiveTab] = React.useState<'profile' | 'tech'>('profile');
   const [copied, setCopied] = React.useState(false);
   const [publicReposCount, setPublicReposCount] = React.useState<number>(15);
-  const [contributionsCount, setContributionsCount] = React.useState<number>(62);
+  const [contributionsCount, setContributionsCount] = React.useState<number>(95);
 
   React.useEffect(() => {
     fetch('https://api.github.com/users/SriniwasAwasthi')

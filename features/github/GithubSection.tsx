@@ -152,24 +152,30 @@ const langColors: Record<string, string> = {
   'C++': 'bg-purple-600',
 };
 
-// Generate fallback contribution activity matching exact GitHub activity (62 contributions)
+// Generate fallback contribution activity matching exact GitHub activity (95 contributions)
 const generateContributions = () => {
   const list = new Array(364).fill(0);
-  list[104] = 1;
-  list[295] = 2;
-  list[300] = 3;
-  list[310] = 4;
-  list[320] = 5;
-  list[324] = 6;
-  list[325] = 4;
-  list[331] = 8;
-  list[333] = 6;
-  list[334] = 5;
-  list[338] = 7;
-  list[340] = 4;
-  list[341] = 2;
-  list[348] = 3;
-  list[355] = 2;
+  list[55] = 1; // Oct 18, 2025
+  list[246] = 2; // Apr 27, 2026
+  list[277] = 2; // May 28, 2026
+  list[283] = 4; // Jun 3, 2026
+  list[284] = 1; // Jun 4, 2026
+  list[285] = 1; // Jun 5, 2026
+  list[291] = 3; // Jun 11, 2026
+  list[296] = 10; // Jun 16, 2026
+  list[300] = 2; // Jun 20, 2026
+  list[326] = 1; // Jul 16, 2026
+  list[333] = 13; // Jul 23, 2026
+  list[334] = 8; // Jul 24, 2026
+  list[335] = 8; // Jul 25, 2026
+  list[336] = 10; // Jul 26, 2026
+  list[337] = 3; // Jul 27, 2026
+  list[338] = 3; // Jul 28, 2026
+  list[345] = 5; // Aug 4, 2026
+  list[346] = 1; // Aug 5, 2026
+  list[348] = 9; // Aug 7, 2026
+  list[350] = 3; // Aug 9, 2026
+  list[355] = 5; // Aug 14, 2026
   return list;
 };
 
@@ -200,7 +206,7 @@ const langHexColors: Record<string, string> = {
 
 export function GithubSection() {
   const [contributions, setContributions] = React.useState<number[]>(generateContributions);
-  const [totalContributions, setTotalContributions] = React.useState<number>(62);
+  const [totalContributions, setTotalContributions] = React.useState<number>(95);
   const [repos, setRepos] = React.useState<DisplayRepo[]>(fallbackRepos);
   const [loading, setLoading] = React.useState<boolean>(true);
   const [isLive, setIsLive] = React.useState<boolean>(false);
@@ -402,7 +408,7 @@ export function GithubSection() {
                       {totalContributions} contributions in the last year
                     </span>
                     <span className="text-[11px] text-muted-foreground font-mono">
-                      Jul 2025 – Jul 2026
+                      Aug 2025 – Aug 2026
                     </span>
                   </div>
 

@@ -11,7 +11,7 @@
 
 ---
 
-🎓 **Student Developer:** 2nd Year Computer Science Engineering Student  
+🎓 **Student Developer:** 3rd Year Computer Science & Software Engineering Student  
 🏛️ **Institution:** P.D.A College of Engineering, Kalaburagi, Karnataka, India  
 🐙 **GitHub Profile:** [@SriniwasAwasthi](https://github.com/SriniwasAwasthi)
 
@@ -38,7 +38,7 @@
 - 🏛️ **Interactive Case-Study Modals**: Deep-dive modals explaining the Problem, Solution, Key Features, Tech Stack, & Future Roadmap for each project.
 - 🎨 **Modern Neon Glassmorphic Design**: Dark-first visual aesthetic built with custom HSL neon design tokens and smooth Framer Motion reveal animations.
 - 💻 **Interactive IDE Hero Card**: Live tabbed code viewer showing developer profile details and JSON technology stack metadata.
-- 📊 **GitHub Activity Dashboard**: Custom contribution heatmap (62+ contributions) and dynamic programming language ratio pie chart.
+- 📊 **GitHub Activity Dashboard**: Custom contribution heatmap (95+ contributions) and dynamic programming language ratio pie chart.
 - 📱 **100% Responsive & Accessible**: Built following WCAG 2.2 AA accessibility standards with full keyboard navigation and semantic HTML.
 
 ---
@@ -155,7 +155,7 @@ git push origin main
 ## 📬 Contact & Social Links
 
 **Sriniwas Awasthi**  
-_Computer Science Engineering Student (2nd Year)_  
+_Computer Science Engineering Student (3rd Year)_  
 P.D.A College of Engineering, Kalaburagi, Karnataka, India
 
 - 🐙 **GitHub:** [@SriniwasAwasthi](https://github.com/SriniwasAwasthi)
