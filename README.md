@@ -180,3 +180,22 @@ Created by **Sriniwas Awasthi**. Personal project code and architecture availabl
 >
 > 🌈 If you enjoyed what you saw, feel free to connect or leave a star ⭐️  
 > Wishing you endless success and brightness in everything you do! 🚀✨ Have a fantastic day ahead! 💖🚀
+
+---
+
+## 💖 Thank You for Visiting!
+
+> *"Thank you so much for taking the time to explore Portfolio!"* 🌟
+
+Taking your precious time to inspect this project, walk through the features, and review my code means the world to me. Every single repository I build is an opportunity to learn, innovate, and push the boundaries of software engineering.
+
+- 🌟 **Enjoyed the project?** Feel free to leave a **Star** on this repository—your support provides immense motivation to keep building exciting projects!
+- 📬 **Let's Connect:** I am always open to constructive feedback, technical discussions, and exciting engineering opportunities. Feel free to explore my other repositories or connect with me directly on [GitHub](https://github.com/SriniwasAwasthi).
+
+*Wishing you a wonderful day ahead, and thank you once again for stopping by!* ✨
+
+---
+
+<div align="center">
+  <sub>Crafted with passion by <a href="https://github.com/SriniwasAwasthi">Sriniwas Awasthi</a>.</sub>
+</div>
