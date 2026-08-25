@@ -39,14 +39,14 @@ const langColors: Record<string, string> = {
 };
 
 const coverColors = [
-  'bg-[#39FF14]',
-  'bg-[#7CFF6B]',
-  'bg-cyan-400',
-  'bg-purple-500',
-  'bg-amber-400',
-  'bg-rose-500',
-  'bg-emerald-400',
-  'bg-indigo-400',
+  'bg-[#39FF14]', // Electric Neon Green (Primary)
+  'bg-[#7CFF6B]', // Bright Mint Green
+  'bg-[#50FA7B]', // Cyber Spring Green
+  'bg-[#00FF87]', // Bright Aqua Lime Green
+  'bg-[#10B981]', // Emerald Green
+  'bg-[#22C55E]', // Vibrant Leaf Green
+  'bg-[#4ADE80]', // Soft Neon Green
+  'bg-[#86EFAC]', // Light Pastel Emerald
 ];
 
 // Helper to format ISO date string to human-readable format

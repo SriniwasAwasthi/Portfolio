@@ -111,7 +111,7 @@ export function Hero() {
             variants={slideUp}
             className="text-base text-muted-foreground max-w-xl mb-8 leading-relaxed"
           >
-            Building 10+ modern web applications using Next.js 15, Drizzle ORM, and Gemini AI.
+            Building 10+ modern web applications using Next.js 15, PostgreSQL, and Gemini AI.
           </motion.p>
 
           {/* CTAs */}
@@ -283,7 +283,7 @@ export function Hero() {
                         {'\n'}
                         {'  '}currentFocus:{' '}
                         <span className="text-[#B7FFAE]">
-                          &quot;Next.js 15, Drizzle ORM &amp; Gemini AI Systems&quot;
+                          &quot;Next.js 15, PostgreSQL &amp; Gemini AI Systems&quot;
                         </span>
                         ,{'\n'}
                         {'  '}status:{' '}
@@ -303,8 +303,8 @@ export function Hero() {
                         <span className="text-[#B7FFAE]">&quot;TypeScript&quot;</span>,{' '}
                         <span className="text-[#B7FFAE]">&quot;Tailwind CSS&quot;</span>,{'\n'}
                         {'    '}
-                        <span className="text-[#B7FFAE]">&quot;Drizzle ORM&quot;</span>,{' '}
                         <span className="text-[#B7FFAE]">&quot;PostgreSQL&quot;</span>,{' '}
+                        <span className="text-[#B7FFAE]">&quot;Python&quot;</span>,{' '}
                         <span className="text-[#B7FFAE]">&quot;Gemini AI API&quot;</span>
                         {'\n'}
                         {'  '}],{'\n'}
