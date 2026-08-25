@@ -62,9 +62,9 @@ export function Hero() {
               text="Hey there!"
               animateOn="inViewHover"
               revealDirection="center"
-              parentClassName="text-5xl sm:text-6xl md:text-7xl font-welcome text-[#7CFF6B] block"
-              className="text-[#7CFF6B] font-bold neon-text-glow"
-              encryptedClassName="text-[#7CFF6B]/40"
+              parentClassName="text-5xl sm:text-6xl md:text-7xl font-welcome text-[#45E05B] block"
+              className="text-[#45E05B] font-bold neon-text-glow"
+              encryptedClassName="text-[#45E05B]/40"
               sequential
               speed={50}
             />
@@ -73,11 +73,11 @@ export function Hero() {
           {/* Availability Badge */}
           <motion.div
             variants={slideUp}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#7CFF6B]/30 bg-[#7CFF6B]/10 text-xs font-semibold tracking-wide text-[#7CFF6B] mb-6 shadow-[0_0_15px_rgba(124,255,107,0.15)]"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#45E05B]/30 bg-[#45E05B]/10 text-xs font-semibold tracking-wide text-[#45E05B] mb-6 shadow-[0_0_15px_rgba(69,224,91,0.15)]"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7CFF6B] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#7CFF6B]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#45E05B] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#45E05B]"></span>
             </span>
             Open to Internships
           </motion.div>
@@ -95,7 +95,7 @@ export function Hero() {
             variants={slideUp}
             className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight mb-4 leading-none"
           >
-            <span className="text-[#7CFF6B] neon-text-glow">Sriniwas Awasthi</span>
+            <span className="text-[#45E05B] neon-text-glow">Sriniwas Awasthi</span>
           </motion.h1>
 
           {/* Supporting Headline */}
