@@ -210,8 +210,8 @@
 /* Neon Green Glow Utilities */
 .neon-text-glow {
   text-shadow:
-    0 0 10px rgba(57, 255, 20, 0.6),
-    0 0 24px rgba(57, 255, 20, 0.3);
+    0 0 10px rgba(92, 255, 61, 0.6),
+    0 0 24px rgba(92, 255, 61, 0.3);
 }
 
 .neon-card-glow {
