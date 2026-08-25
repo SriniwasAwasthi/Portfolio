@@ -33,8 +33,8 @@ const milestones: Milestone[] = [
     title: 'Full Stack Development',
     subtitle: 'Building complete applications with scalable architecture and modern technologies.',
     description:
-      'Creating production-grade web applications with React, Next.js, TypeScript, and PostgreSQL. Focused on performance, clean architecture, and developer experience.',
-    skills: ['TypeScript', 'Next.js', 'React', 'PostgreSQL', 'Tailwind'],
+      'Creating production-grade web applications with React, Next.js, TypeScript, and REST APIs. Focused on performance, clean architecture, and developer experience.',
+    skills: ['TypeScript', 'Next.js', 'React', 'Tailwind', 'REST APIs'],
     icon: Code,
     status: 'current',
   },

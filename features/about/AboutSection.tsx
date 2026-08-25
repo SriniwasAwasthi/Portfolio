@@ -36,7 +36,7 @@ export function AboutSection() {
             <Reveal delay={0.15}>
               <div className="prose prose-neutral dark:prose-invert max-w-none">
                 <h3 className="text-xl font-heading font-bold text-foreground mb-4">
-                  Built 10+ full-stack web applications using Next.js 15, PostgreSQL, and Gemini AI
+                  Built 10+ modern web applications using Next.js 15, TypeScript, and Gemini AI
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   I am a Full-Stack Software Engineer &amp; AI Systems Developer pursuing Computer Science Engineering at PDA College of Engineering (Kalaburagi). I specialize in solving complex problems, writing clean code, and building high-performance products that combine AI workflows, modern web UI, and reliable databases.

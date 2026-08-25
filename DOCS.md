@@ -157,7 +157,7 @@ Apply: `className="font-heading"` or `className="font-sans"` or `className="font
   problem: 'What problem does it solve?',
   solution: 'How did you solve it?',
   features: ['Feature 1', 'Feature 2'],
-  tech: ['Next.js', 'PostgreSQL'],
+  tech: ['Next.js', 'TypeScript'],
   learnings: 'What did you learn?',
   future: ['Future idea 1'],
   github: 'https://github.com/your-username/repo',

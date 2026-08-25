@@ -132,12 +132,12 @@ const skillCategories = [
     title: 'Databases & Tools',
     icon: Database,
     description:
-      'I work with PostgreSQL, MySQL, Git, and GitHub to build reliable applications with organized development workflows.',
+      'I work with SQL, SQLite, Git, and GitHub to build reliable applications with organized development workflows.',
     skills: [
       {
-        name: 'PostgreSQL & MySQL',
+        name: 'SQL & Relational DBs',
         category: 'databases',
-        description: 'Schema design, relations, indexes, and table constraints.',
+        description: 'Schema design, relations, queries, and table constraints.',
         level: 'Intermediate',
         icon: Database,
       },
